@@ -18,8 +18,8 @@ COPY . .
 # Create necessary directories if not exists
 RUN mkdir -p .streamlit
 
-# Copy the Streamlit config to the right location
-COPY config.toml .streamlit/config.toml
+# Create config.toml file directly instead of copying it
+RUN echo '[theme]\nprimaryColor="#ff00c1"\nbackgroundColor="#120458"\nsecondaryBackgroundColor="#000000"\ntextColor="#ffffff"\nfont="monospace"\n\n[server]\nenableCORS=false\nenableXsrfProtection=false\n\n[browser]\ngatherUsageStats = false' > .streamlit/config.toml
 
 # Expose the port Streamlit runs on
 EXPOSE 8501
