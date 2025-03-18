@@ -1,0 +1,11 @@
+streamlit
+supabase
+streamlit-extras
+extra-streamlit-components
+streamlit-webrtc
+python-dotenv
+random2
+numpy
+pandas
+pillow
+streamlit-sortables
